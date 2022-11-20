@@ -1,0 +1,22 @@
+{
+  "name": "stay-connected",
+  "version": "0.0.1",
+  "description": "#free_iran",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rfwn/stay-connected.git"
+  },
+  "author": "rfwn",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/rfwn/stay-connected/issues"
+  },
+  "homepage": "https://github.com/rfwn/stay-connected#readme",
+  "dependencies": {
+    "discord.js": "^14.6.0"
+  }
+}
