@@ -15,14 +15,14 @@ module.exports = {
             return interaction.reply({ content: "نه", ephemeral: true });
         const server = await interaction.options.getString('address');
         const channel = await interaction.guild.channels.cache.get('1038081524542750730');
-        let res;
-        if (server.split('://')[0] == "vmess") {
-            const data = JSON.parse(atob(server.split("://")[1]));
-            data.ps = "https://discord.gg/rCf3ZZ6zMr"
-            res = btoa(JSON.stringify(data))
-        } else {
-            res = server.split('#')[0] + '#' + 'https://discord.gg/rCf3ZZ6zMr'
-        }
+        let res = 'test';
+        // if (server.split('://')[0] == "vmess") {
+        //     const data = JSON.parse(atob(server.split("://")[1]));
+        //     data.ps = "https://discord.gg/rCf3ZZ6zMr"
+        //     res = btoa(JSON.stringify(data))
+        // } else {
+        //     res = server.split('#')[0] + '#' + 'https://discord.gg/rCf3ZZ6zMr'
+        // }
 
         const embed = new EmbedBuilder().setTitle(server.split('://')[0]).setDescription(`\`\`\`${server.split('://')[0]}://${res}\`\`\``);
 
