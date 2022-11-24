@@ -1,0 +1,2 @@
+const server = "vless://33cd0733-c749-4af1-bea1-c2e58d8b289e@178.162.164.140:28835?path=%2Ffg56Htyr&security=none&encryption=none&type=ws#%40hashmakvpn+%D8%A7%DA%AF%D9%87+%D9%82%D8%B7%D8%B9+%D8%B4%D8%AF%DB%8C+%D8%A8%DB%8C%D8%A7+%D8%A7%DB%8C%D9%86%D8%AC%D8%A7";
+server.split('#')[0] + '#' + 'https://discord.gg/rCf3ZZ6zMr'
