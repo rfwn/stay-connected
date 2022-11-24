@@ -24,9 +24,9 @@ module.exports = {
             res = server.split('#')[0] + '#' + 'https://discord.gg/rCf3ZZ6zMr'
         }
 
-        const embed = new EmbedBuilder().setTitle(server.split('://')[0]).setDescription(`\`\`\`${res}\`\`\``);
+        const embed = new EmbedBuilder().setTitle(server.split('://')[0]).setDescription(`\`\`\`${server.split('://')[0]}://${res}\`\`\``);
 
         await interaction.editReply('sent');
-        await channel.send({ content: "<@&1038466977175457852>", embeds: [embed] });
+        await channel.send({ content: "bruh", embeds: [embed] });
     },
 };
