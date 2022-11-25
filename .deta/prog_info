@@ -1,1 +1,0 @@
-{"id":"9e68bf89-6138-4e05-95b5-2082d2d9a6b1","space":39783,"runtime":"nodejs14.x","name":"stay-connected","path":"vq7yid","project":"a0gckbln","account":"144798365827","region":"eu-central-1","deps":["discord.js@^14.6.0","dotenv@^16.0.3"],"envs":null,"public":true,"log_level":"debug","cron":""}
