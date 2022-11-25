@@ -31,12 +31,12 @@ module.exports = {
             
             const data = JSON.parse(decode(server.split("://")[1]));
             data.ps = "https://discord.gg/rCf3ZZ6zMr"
-            res = encode(JSON.stringify(data))
+            res = `${server.split('://')[0]}://${encode(JSON.stringify(data))}`
         } else {
             res = server.split('#')[0] + '#' + 'https://discord.gg/rCf3ZZ6zMr'
         }
 
-        const embed = new EmbedBuilder().setTitle(server.split('://')[0]).setDescription(`\`\`\`${server.split('://')[0]}://${res}\`\`\``);
+        const embed = new EmbedBuilder().setTitle(server.split('://')[0]).setDescription(`\`\`\`${res}\`\`\``);
         
         await interaction.editReply('sent');
         
