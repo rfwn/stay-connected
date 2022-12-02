@@ -13,4 +13,3 @@ client.commands = new Collection();
 	await deployCommands(client);
 	client.login(process.env.TOKEN);
 })();
-

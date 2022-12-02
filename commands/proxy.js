@@ -16,7 +16,7 @@ module.exports = {
 					{ name: 'mci', value: '❗MCI. ONLY❗' },
 					{ name: 'irancell', value: '❗Irancell. ONLY❗' },
 					{ name: 'rightel', value: '❗Rightell. ONLY❗' },
-					{ name: 'all', value: 'All Operators' }
+					{ name: 'all', value: 'All Operators👍' }
 				)
         )
         .setDescription('post some proxies. not yuu.'),
