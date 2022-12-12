@@ -2,7 +2,7 @@ const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('post-proxy')
+        .setName('proxy')
         .addStringOption(option =>
             option.setName('proxies')
                 .setDescription('seperate em with ::')
@@ -13,21 +13,21 @@ module.exports = {
                 .setDescription('کیر میخوام')
                 .setRequired(true)
                 .addChoices(
-					{ name: 'mci', value: '❗MCI. ONLY❗' },
-					{ name: 'irancell', value: '❗Irancell. ONLY❗' },
-					{ name: 'rightel', value: '❗Rightell. ONLY❗' },
-					{ name: 'all', value: 'All Operators👍' }
+					{ name: 'MCI.', value: '❗Hamrah Aval. ONLY❗' },
+					{ name: 'Irancell', value: '❗Irancell ONLY❗' },
+					{ name: 'Wi-Fi', value: '❗Wi-Fi ONLY❗' },
+					{ name: 'All', value: 'All Operators👍' }
 				)
         )
         .setDescription('post some proxies. not yuu.'),
     async execute(interaction) {
         await interaction.deferReply();
-        if (!['754915745774829618', '236339605199257601', '702401397114667059'].includes(interaction.member.id)){
+        if (!['754915745774829618', '236339605199257601', '900780499058982983'].includes(interaction.member.id)){
             return interaction.reply("نه");
         }    
-        const numerals = ['اول','دوم','سوم','چهارم','پنجم','ششم','هفتم','هشتم']
-        const proxies = await interaction.options.getString('proxies');
-        const operator = await interaction.options.getString('operator');
+        const numerals = ['پروکسی 1','پروکسی 2','پروکسی 3','پروکسی 4','پروکسی 5','پروکسی 6','پروکسی 7','پروکسی 8']
+        const proxies = await interaction.options.getString('Proxies');
+        const operator = await interaction.options.getString('Operator');
         const channel = await interaction.guild.channels.cache.get('1043062591502696468');
         let res = '';
 
@@ -42,7 +42,7 @@ module.exports = {
         const embed = new EmbedBuilder().setTitle('Telegram Proxies').setColor('#00b2e3').setDescription(res).setFooter({text: operator});
 
         
-        await interaction.editReply('sent');
+        await interaction.editReply('Harold is done thinking!');
         
         await channel.send({ content: "<@&1043062981564571688>", embeds: [embed] });
     },

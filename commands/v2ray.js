@@ -2,16 +2,16 @@ const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('post-v2ray')
+        .setName('v2ray')
         .addStringOption(option =>
-            option.setName('address')
+            option.setName('server')
                 .setDescription('bro')
                 .setRequired(true)
         )
         .setDescription('post a v2ray server. not yuu.'),
     async execute(interaction) {
         await interaction.deferReply();
-        if (!['754915745774829618', '236339605199257601', '702401397114667059'].includes(interaction.member.id)){
+        if (!['754915745774829618', '236339605199257601', '685169776359768094'].includes(interaction.member.id)){
             return interaction.reply("نه");
         }    
         const server = await interaction.options.getString('address');
@@ -36,9 +36,9 @@ module.exports = {
             res = server.split('#')[0] + '#' + 'https://discord.gg/rCf3ZZ6zMr'
         }
 
-        const embed = new EmbedBuilder().setTitle(server.split('://')[0]).setDescription(`\`\`\`${res}\`\`\``);
+        const embed = new EmbedBuilder().setTitle(server.split('://')[0]).setDescription(`${res}`);
         
-        await interaction.editReply('sent');
+        await interaction.editReply('Harold is done thinking!');
         
         await channel.send({ content: "<@&1038466977175457852>", embeds: [embed] });
     },
