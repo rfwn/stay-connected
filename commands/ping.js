@@ -5,6 +5,15 @@ module.exports = {
         .setName('ping')
         .setDescription('kose nane khameneii'),
     async execute(interaction) {
-        await interaction.reply('اره دا زندم.');
+        const m = await interaction.channel.send('عااااح');
+        const messageTimestamp = m.createdTimestamp;
+        m.delete();
+        const embed = new EmbedBuilder()
+            .addFields(
+                { name: '🏓 پینگ', value: `> \`${messageTimestamp - interaction.createdTimestamp}ms\``, inline: true },
+                { name: '⌛ پینگ دیسکورد', value: `> \`${Math.round(this.client.ws.ping)}ms\``, inline: true },
+            )
+            .setTimestamp();
+        await interaction.reply({ embeds: [embed] });
     },
 };
