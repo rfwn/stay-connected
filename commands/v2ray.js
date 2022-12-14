@@ -53,7 +53,7 @@ module.exports = {
 
         const embed = new EmbedBuilder().setTitle(country).setDescription(`\`\`\`${res}\`\`\``);
         
-        await interaction.editReply('Harold is done thinking!');
+        await interaction.editReply('<#1038081524542750730> done!');
         
         await channel.send({ content: "<@&1038466977175457852>", embeds: [embed] });
     },

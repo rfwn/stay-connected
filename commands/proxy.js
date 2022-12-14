@@ -42,7 +42,7 @@ module.exports = {
         const embed = new EmbedBuilder().setTitle('Telegram Proxies').setColor('#00b2e3').setDescription(res).setFooter({text: operator});
 
         
-        await interaction.editReply('Harold is done thinking!');
+        await interaction.editReply('<#1043062591502696468> done!');
         
         await channel.send({ content: "<@&1043062981564571688>", embeds: [embed] });
     },

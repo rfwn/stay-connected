@@ -20,7 +20,7 @@ module.exports = {
 		
         const embed = new EmbedBuilder().setTitle('NordVPN Account').setColor('Random').setDescription(`\`\`\`${res}\`\`\``);
         
-        await interaction.editReply('Harold is done thinking!');
+        await interaction.editReply('<#1045861448452165722> done!');
         
         await channel.send({ content: "<@&1038467223045537844>", embeds: [embed] });
     },
