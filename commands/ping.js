@@ -1,4 +1,4 @@
-const { SlashCommandBuilder } = require('discord.js');
+const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -11,7 +11,7 @@ module.exports = {
         const embed = new EmbedBuilder()
             .addFields(
                 { name: '🏓 پینگ', value: `> \`${messageTimestamp - interaction.createdTimestamp}ms\``, inline: true },
-                { name: '⌛ پینگ دیسکورد', value: `> \`${Math.round(this.client.ws.ping)}ms\``, inline: true },
+                { name: '⌛ پینگ دیسکورد', value: `> \`${Math.round(interaction.client.ws.ping)}ms\``, inline: true },
             )
             .setTimestamp();
         await interaction.reply({ embeds: [embed] });

@@ -26,8 +26,8 @@ module.exports = {
             return interaction.reply("نه");
         }    
         const numerals = ['پروکسی 1','پروکسی 2','پروکسی 3','پروکسی 4','پروکسی 5','پروکسی 6','پروکسی 7','پروکسی 8']
-        const proxies = await interaction.options.getString('Proxies');
-        const operator = await interaction.options.getString('Operator');
+        const proxies = await interaction.options.getString('proxies');
+        const operator = await interaction.options.getString('operator');
         const channel = await interaction.guild.channels.cache.get('1043062591502696468');
         let res = '';
 

@@ -8,13 +8,28 @@ module.exports = {
                 .setDescription('bro')
                 .setRequired(true)
         )
+        .addStringOption(option =>
+            option.setName('country')
+                .setDescription('hell naw')
+                .setRequired(false)
+                .addChoices(
+					{ name: 'Germany', value: '🇩🇪Germany' },
+                    { name: 'USA', value: '🇺🇸USA' },
+                    { name: 'Netherlands', value: '🇳🇱Holland' },
+                    { name: 'Finland', value: '🇫🇮Finland' },
+                    { name: 'England', value: '🇬🇧England' },
+                    { name: 'HongKong', value: '🇭🇰Hong Kong' },
+                    { name: 'France', value: '🇫🇷France' }
+                )
+        )
         .setDescription('post a v2ray server. not yuu.'),
     async execute(interaction) {
         await interaction.deferReply();
         if (!['754915745774829618', '236339605199257601', '685169776359768094'].includes(interaction.member.id)){
             return interaction.reply("نه");
         }    
-        const server = await interaction.options.getString('address');
+        const server = await interaction.options.getString('server');
+        const country = await interaction.options.getString('country');
         const channel = await interaction.guild.channels.cache.get('1038081524542750730');
         let res;
         if (server.split('://')[0] == "vmess") {
@@ -36,7 +51,7 @@ module.exports = {
             res = server.split('#')[0] + '#' + 'https://discord.gg/rCf3ZZ6zMr'
         }
 
-        const embed = new EmbedBuilder().setTitle(server.split('://')[0]).setDescription(`${res}`);
+        const embed = new EmbedBuilder().setTitle(country).setDescription(`\`\`\`${res}\`\`\``);
         
         await interaction.editReply('Harold is done thinking!');
         
