@@ -11,7 +11,7 @@ module.exports = {
         .setDescription('post a pia vpn account. not yuu.'),
     async execute(interaction) {
         await interaction.deferReply();
-        if (!['754915745774829618', '236339605199257601', '791672019237732382'].includes(interaction.member.id)){
+        if (!['754915745774829618', '236339605199257601', '685169776359768094'].includes(interaction.member.id)){
             return interaction.reply("نه");
         }    
         const account = await interaction.options.getString('account');
