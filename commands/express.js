@@ -25,7 +25,7 @@ module.exports = {
 		
         const embed = new EmbedBuilder().setTitle('ExpressVPN Account').setColor('Random').setDescription(`\`\`\`${res}\`\`\``);
         
-        await interaction.editReply('<#1038072848763342929> done!');
+        await interaction.editReply('<#1038072848763342929> done! <:Satho:1056261000661303316>');
         
         await channel.send({ content: "<@&1038467113381269604>", embeds: [embed] });
     },
